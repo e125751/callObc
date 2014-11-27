@@ -13,6 +13,7 @@
 		6A17FC7E1A2494A400336687 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A17FC7D1A2494A400336687 /* Images.xcassets */; };
 		6A17FC811A2494A400336687 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A17FC7F1A2494A400336687 /* LaunchScreen.xib */; };
 		6A17FC8D1A2494A400336687 /* callObcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A17FC8C1A2494A400336687 /* callObcTests.swift */; };
+		6A17FC981A24953D00336687 /* ObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17FC971A24953D00336687 /* ObjCClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		6A17FC861A2494A400336687 /* callObcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = callObcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A17FC8B1A2494A400336687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A17FC8C1A2494A400336687 /* callObcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = callObcTests.swift; sourceTree = "<group>"; };
+		6A17FC961A24953D00336687 /* callObc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "callObc-Bridging-Header.h"; sourceTree = "<group>"; };
+		6A17FC971A24953D00336687 /* ObjCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +62,11 @@
 		6A17FC681A2494A400336687 = {
 			isa = PBXGroup;
 			children = (
+				6A17FC971A24953D00336687 /* ObjCClass.m */,
 				6A17FC731A2494A400336687 /* callObc */,
 				6A17FC891A2494A400336687 /* callObcTests */,
 				6A17FC721A2494A400336687 /* Products */,
+				6A17FC961A24953D00336687 /* callObc-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,6 +219,7 @@
 			files = (
 				6A17FC791A2494A400336687 /* ViewController.swift in Sources */,
 				6A17FC771A2494A400336687 /* AppDelegate.swift in Sources */,
+				6A17FC981A24953D00336687 /* ObjCClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +344,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = callObc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "callObc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,9 +357,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = callObc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "callObc-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +418,7 @@
 				6A17FC921A2494A400336687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A17FC931A2494A400336687 /* Build configuration list for PBXNativeTarget "callObcTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +427,7 @@
 				6A17FC951A2494A400336687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
